@@ -9,8 +9,8 @@ server.defineCommand('add', {
     action(command) {
         jsonRpcHandler
             .addCommand(command)
-            .then((data) => {
-                console.log(data);
+            .then(() => {
+                console.log("command added");
                 this.displayPrompt()
             })
             .catch((e) => {
@@ -24,8 +24,8 @@ server.defineCommand('remove', {
     action(command) {
         jsonRpcHandler
             .removeCommand(command)
-            .then(data => {
-                console.log('Command removed');
+            .then(() => {
+                console.log('command removed');
                 this.displayPrompt()
             })
             .catch(e => {

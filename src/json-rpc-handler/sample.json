@@ -1,0 +1,31 @@
+{"jsonrpc": "2.0","method": "getname","id": "12313","params": "testData","response": {"result": {"name":"Gagan"}}}
+
+{
+    "jsonrpc": "2.0",
+    "method": "getage",
+    "id": "123",
+    "params": "testData",
+    "response": {
+        "error": {
+            "code":124,
+            "message":"readable message"
+        }
+    }
+}
+
+
+{
+    "methodName": {
+        "requests": [
+            {
+                "params": {},
+                "responses": [
+                    {},
+                    {}
+                ]
+            }
+        ]
+    }
+}
+
+
