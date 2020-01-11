@@ -10,5 +10,12 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "web-app-e2e": {
+      "tags": []
+    },
+    "web-app": {
+      "tags": []
+    }
+  }
 }
