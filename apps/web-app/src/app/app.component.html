@@ -1,5 +1,19 @@
-<header>
-  <mat-toolbar color="primary">
-    Api simulator
-  </mat-toolbar>
-</header>
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row" fxFlex="80" fxFlexOffset="10" fxFlex.sm="100" fxFlexOffset.sm="0" fxFlex.lg="70"
+    fxFlexOffset.lg="15">
+    <span fxFlex>
+      <button mat-button (click)="goToHome()">
+        <span class="mat-title" >
+          Api simulator
+        </span>
+      </button>
+    </span>
+    <span fxFlex fxLayoutAlign="start center">
+      <button mat-raised-button color="accent" (click)="addApi()">Add api</button>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container" fxLayout="row" fxFlex="80" fxFlexOffset="10" fxFlex.sm="100" fxFlexOffset.sm="0" fxFlex.lg="70"
+  fxFlexOffset.lg="15">
+  <router-outlet></router-outlet>
+</div>

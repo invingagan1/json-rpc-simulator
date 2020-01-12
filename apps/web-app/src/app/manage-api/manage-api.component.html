@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="space-between start">
+    <div class="object-list" fxFlex="40" style="border-right: 1px solid #CDCDCD; padding: 4px;">
+        <h4 class="mat-title">Objects</h4>
+        <h4 *ngIf="objects.length == 0">No api added</h4>
+        <mat-nav-list *ngIf="objects.length">
+            <mat-list-item *ngFor="let object of objects">
+                <div mat-line>{{object.name}}</div>
+            </mat-list-item>
+        </mat-nav-list>
+    </div>
+    <div class="api-list" fxFlex="60" style="padding: 4px;">
+        <h4 class="mat-title">Apis</h4>
+    </div>
+</div>

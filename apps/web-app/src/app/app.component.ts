@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'json-rpc-simulator-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-app';
+  constructor(private router: Router) {}
+  addApi(): void {
+    this.router.navigate(['add']);
+  }
+  goToHome(): void {
+    this.router.navigate(['']);
+  }
 }

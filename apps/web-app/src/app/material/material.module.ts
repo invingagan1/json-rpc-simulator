@@ -1,8 +1,22 @@
 import {NgModule} from '@angular/core';
-import {MatToolbarModule} from '@angular/material';
+import {MatToolbarModule, MatTabsModule, MatButtonModule, MatTreeModule, MatIconModule, MatListModule, MatDivider, MatDividerModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatSlideToggleModule, MatDialogModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const Modules = [
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatTreeModule,
+    MatIconModule,
+    MatListModule,
+    FlexLayoutModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatListModule,
+    MatDialogModule
 ];
 
 @NgModule({
