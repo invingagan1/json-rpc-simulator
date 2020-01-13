@@ -5,14 +5,14 @@
         <div fxLayout fxLayoutAlign="space-between" fxLayoutGap="16px">
             <mat-form-field appearance="outline" fxFlex="50">
                 <mat-label>Object</mat-label>
-                <input matInput placeholder="Enter object name">
+                <input matInput placeholder="Enter object name" #object>
                 <mat-hint align="end">names separated with .</mat-hint>
             </mat-form-field>
 
             <mat-form-field appearance="outline" fxFlex="50">
                 <mat-label>Select an method</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let method of methods | keyvalue" value="method.key">{{method.value}}
+                <mat-select  #selectedMethod>
+                    <mat-option *ngFor="let method of methods | keyvalue" [value]="method.key">{{method.value}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -21,12 +21,12 @@
         <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="16px">
             <mat-form-field appearance="outline" fxFlex="50">
                 <mat-label>Interval</mat-label>
-                <input matInput placeholder="Enter Interval" type="number">
+                <input matInput placeholder="Enter Interval" type="number" value="1000" #interval>
                 <mat-hint align="end">milliseconds</mat-hint>
             </mat-form-field>
             
         </div>
-        <mat-slide-toggle >Repeat responses</mat-slide-toggle>
+        <mat-slide-toggle>Repeat responses</mat-slide-toggle>
 
     </section>
     <br>
@@ -41,7 +41,7 @@
     </section>
     <mat-divider></mat-divider>
     <section style="padding: 16px;">
-        <button mat-raised-button color="primary">Save</button>
+        <button mat-raised-button color="primary" (click)="save(object.value, selectedMethod.value, interval.value )">Save</button>
     </section>
     
 </div>

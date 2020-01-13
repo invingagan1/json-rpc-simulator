@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AddResponseDialogComponent } from './add-response-dialog/add-response-dialog.component';
+import { SimulatorApi } from '../interfaces';
 
 @Component({
   selector: 'json-rpc-simulator-add-api',
@@ -18,10 +19,21 @@ export class AddApiComponent {
     signal_unsubscribe: 'signal.unsubscribe'
   };
 
+  public api: SimulatorApi = null;
+
   constructor(private dialog: MatDialog) {}
   addResponse(): void {
-    this.dialog.open(AddResponseDialogComponent, {
-      width: '50%'
-    });
+    this.dialog
+      .open(AddResponseDialogComponent, {
+        width: '50%',
+        data: {
+          response: ''
+        }
+      })
+      .afterClosed()
+      .subscribe(d => console.log(d));
+  }
+  save(object: string, selectedMethod: string, interval: number): void {
+    console.log(object,selectedMethod, interval);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'json-rpc-simulator-root',
@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'web-app';
-  constructor(private router: Router) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    
+  }
   addApi(): void {
     this.router.navigate(['add']);
   }
