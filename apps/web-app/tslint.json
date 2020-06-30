@@ -1,7 +1,0 @@
-{
-  "extends": "../../tslint.json",
-  "rules": {
-    "directive-selector": [true, "attribute", "jsonRpcSimulator", "camelCase"],
-    "component-selector": [true, "element", "json-rpc-simulator", "kebab-case"]
-  }
-}
